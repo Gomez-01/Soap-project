@@ -15,6 +15,10 @@ class ServicoFinanceiro(ServiceBase):
 
         if capital <= 0:
             raise ValueError("Capital inválido")
+        if taxa <= 0:
+            raise ValueError("Taxa inválida")
+        if tempo <= 0:
+            raise ValueError("Tempo inválido")
 
         return capital + (capital * taxa * tempo)
 
@@ -23,6 +27,10 @@ class ServicoFinanceiro(ServiceBase):
 
         if capital <= 0:
             raise ValueError("Capital inválido")
+        if taxa <= 0:
+            raise ValueError("Taxa inválida")
+        if tempo <= 0:
+            raise ValueError("Tempo inválido")
 
         return capital * ((1 + taxa) ** tempo)
 
