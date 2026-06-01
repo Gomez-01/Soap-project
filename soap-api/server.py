@@ -2,6 +2,7 @@ from spyne import Application
 from spyne import rpc
 from spyne import ServiceBase
 from spyne import Double
+from spyne import Fault
 from spyne.protocol.soap import Soap11
 from spyne.server.wsgi import WsgiApplication
 
@@ -14,11 +15,11 @@ class ServicoFinanceiro(ServiceBase):
     def calcularJurosSimples(ctx, capital, taxa, tempo):
 
         if capital <= 0:
-            raise ValueError("Capital inválido")
+            raise Fault(faultcode='Client', faultstring='Capital inválido')
         if taxa <= 0:
-            raise ValueError("Taxa inválida")
+            raise Fault(faultcode='Client', faultstring='Taxa inválida')
         if tempo <= 0:
-            raise ValueError("Tempo inválido")
+            raise Fault(faultcode='Client', faultstring='Tempo inválido')
 
         return capital + (capital * taxa * tempo)
 
@@ -26,11 +27,11 @@ class ServicoFinanceiro(ServiceBase):
     def calcularJurosCompostos(ctx, capital, taxa, tempo):
 
         if capital <= 0:
-            raise ValueError("Capital inválido")
+            raise Fault(faultcode='Client', faultstring='Capital inválido')
         if taxa <= 0:
-            raise ValueError("Taxa inválida")
+            raise Fault(faultcode='Client', faultstring='Taxa inválida')
         if tempo <= 0:
-            raise ValueError("Tempo inválido")
+            raise Fault(faultcode='Client', faultstring='Tempo inválido')
 
         return capital * ((1 + taxa) ** tempo)
 
