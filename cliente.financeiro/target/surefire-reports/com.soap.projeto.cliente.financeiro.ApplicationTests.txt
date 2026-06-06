@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.soap.projeto.cliente.financeiro.ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.715 s -- in com.soap.projeto.cliente.financeiro.ApplicationTests

@@ -1,0 +1,9 @@
+com\financeiro\client\CalcularJurosCompostos.class
+com\financeiro\client\package-info.class
+com\financeiro\client\CalcularJurosCompostosResponse.class
+com\financeiro\client\ObjectFactory.class
+com\financeiro\client\Application.class
+com\soap\projeto\cliente\financeiro\Application.class
+com\financeiro\client\CalcularJurosSimples.class
+com\financeiro\client\ServicoFinanceiro.class
+com\financeiro\client\CalcularJurosSimplesResponse.class
